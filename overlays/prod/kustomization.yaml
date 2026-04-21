@@ -1,0 +1,14 @@
+resources:
+  - ../../base
+
+namePrefix: prod-
+
+commonLabels:
+  environment: prod
+
+patches:
+  - path: replica-patch.yaml
+
+images:
+  - name: nginx
+    newTag: stable
