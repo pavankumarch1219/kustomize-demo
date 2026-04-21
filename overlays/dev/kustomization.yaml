@@ -1,0 +1,14 @@
+resources:
+  - ../../base
+
+namePrefix: dev-
+
+commonLabels:
+  environment: dev
+
+patches:
+  - path: replica-patch.yaml
+
+images:
+  - name: nginx
+    newTag: 1.25
