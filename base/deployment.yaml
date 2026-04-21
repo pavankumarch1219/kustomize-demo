@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pk-app
+  labels:
+    app: pk-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pk-app
+  template:
+    metadata:
+      labels:
+        app: pk-app
+    spec:
+      containers:
+      - name: pk-app
+        image: nginx:latest
+        ports:
+        - containerPort: 80
